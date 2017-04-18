@@ -39,7 +39,7 @@ and delegated permissions. All other members of the group API, including updatin
 support only delegated permissions. See [known issues](https://developer.microsoft.com/en-us/graph/docs/overview/release_notes#group-permission-scopes) for examples.
 
 ## Response
-If successful, this method returns a `200 OK` response code and updated [group](../resources/group.md) object in the response body.
+If successful, this method returns 204, No Content response code. It does not return anything in the response body..
 ## Example
 ##### Request
 Here is an example of the request.
@@ -70,21 +70,10 @@ Here is an example of the response. Note: The response object shown here may be 
   "truncated": true,
   "@odata.type": "microsoft.graph.group"
 } -->
-```http
-HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 211
-
-{
-  "description": "description-value",
-  "displayName": "displayName-value",
-  "groupTypes": [
-    "groupTypes-value"
-  ],
-  "mail": "mail-value",
-  "mailEnabled": true,
-  "mailNickname": "mailNickname-value"
-}
+```
+HTTP/1.1 204 OK
+content-type: text/plain
+""
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
